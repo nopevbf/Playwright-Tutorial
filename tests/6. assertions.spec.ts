@@ -11,7 +11,6 @@ test("First test", async ({ page }) => {
   await page.locator("//input[@id='username']").fill("tomsmith");
   await page.locator("//input[@id='password']").fill("SuperSecretPassword!!");
   await page.locator("//i[@class='fa fa-2x fa-sign-in']").click();
-  await page.pause();
   await expect(page.locator("//div[@id='flash']")).toContainText(
     "Your password is invalid!"
   );

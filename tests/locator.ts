@@ -1,3 +1,17 @@
+/* Locator adalah sebuah objek yang digunakan untuk menentukan elemen pada halaman web */
+// locator dapat berupa selector CSS, XPath, atau elemen HTML
+
+/* Contoh penggunaan locator */
+// await page.locator("//a[contains(text(),'A/B Testing')]").click();
+
+/* Dokumentasi lengkap locator dapat dilihat di https://playwright.dev/docs/locators */
+
+/* Contoh penggunaan locator dengan menggunakan objek */
+// await page.click(locator.abTesting);
+
+/* export file untuk locator dan cara memanggilnya di test */
+// import { locator } from "./locator";
+
 export const locator = {
   abTesting: "//a[contains(text(),'A/B Testing')]",
   addRemoveElements: "//a[contains(text(),'Add/Remove Elements')]",
@@ -14,6 +28,7 @@ export const locator = {
   formAuthentication: "//a[contains(text(),'Form Authentication')]",
   frames: "//a[contains(text(),'Frames')]",
   hovers: "//a[contains(text(),'Hovers')]",
+  iframes: "//a[contains(text(),'iFrame')]",
   infiniteScroll: "//a[contains(text(),'Infinite Scroll')]",
   inputs: "//a[contains(text(),'Inputs')]",
   jqueryUiMenus: "//a[contains(text(),'JQuery UI Menus')]",
